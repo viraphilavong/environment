@@ -1,0 +1,17 @@
+export GH_PAT='git-personal-access-token'
+gitcheckout () {
+    git checkout "$1"
+}
+gitaddcommit () {
+    git add . && git commit -m "$1"
+}
+gitcommitpush () {
+    git add . && git commit -m "$1" && git push
+}
+gitfetchpull () {
+    git fetch && git pull
+}
+alias gc="gitcheckout"
+alias gam="gitaddcommit"
+alias gcm="gitcommitpush"
+alias gsync="gitfetchpull"
